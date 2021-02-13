@@ -18,7 +18,7 @@ public class Alunos {
     }
 
 
-   void isAprovado() {
+   public void isAprovado() {
 
         resultadoAluno = false;
 
