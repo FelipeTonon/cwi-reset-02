@@ -3,10 +3,10 @@ package exercicio.um;
 public class Diretor {
 
     private String nomeCompleto;
-    private int idadeDoDiretor;
-    private int quantidadeDeFilmesDirigidos;
+    private Integer idadeDoDiretor;
+    private Integer quantidadeDeFilmesDirigidos;
 
-    public Diretor(String nomeCompleto, int idadeDoDiretor, int quantidadeDeFilmesDirigidos) {
+    public Diretor(String nomeCompleto, Integer idadeDoDiretor, Integer quantidadeDeFilmesDirigidos) {
         this.nomeCompleto = nomeCompleto;
         this.idadeDoDiretor = idadeDoDiretor;
         this.quantidadeDeFilmesDirigidos = quantidadeDeFilmesDirigidos;
