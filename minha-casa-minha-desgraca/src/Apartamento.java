@@ -7,25 +7,22 @@ public class Apartamento extends Imovel{
         this.andar = andar;
     }
 
+    @Override
     public String apresentacao(){
 
-        System.out.println("*** PREÇO DESSA BARBADINHA ***");
-        System.out.println("Valor: R$ " + this.valor);
         System.out.println("*** INFORMAÇÕES DO IMÓVEL *** ");
-        System.out.println("Cidade: " + endereco.getCidade());
-        System.out.println("Estado: " + endereco.getEstado());
-        System.out.println("Tipo do imóvel: " + this.tipo);
-        System.out.println("Logradouro: " + endereco.getLogradouro());
-        System.out.println("Número: " + endereco.getNumero());
-        System.out.println("Bairro: " + endereco.getBairro());
-        System.out.println("Complemento: " + endereco.getComplemento());
-
+        System.out.println("Cidade: " + getCidade());
+        System.out.println("Estado: " + getEstado());
+        System.out.println("Logradouro: " + getLogradouro());
+        System.out.println("Número: " + getNumero());
+        System.out.println("Bairro: " + getBairro());
+        System.out.println("Complemento: " + getComplemento());
+        System.out.println("Tipo do imóvel: " + getTipo());
+        System.out.println("Andar: " + this.andar);
+        System.out.println("*** PREÇO DESSA BARBADINHA ***");
+        System.out.println("Valor: R$ " + this.getValor());
         return null;
 
-    }
-
-    public Integer getAndar() {
-        return andar;
     }
 
 }

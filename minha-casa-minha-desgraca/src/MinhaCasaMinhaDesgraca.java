@@ -22,20 +22,22 @@ public class MinhaCasaMinhaDesgraca {
         Casa casaDoisQuartos = new Casa(TipoDoImovel.CASA,200000d,oriental,true);
         opcoesParaFinanciamento.registrarImovel(casaDoisQuartos);
 
-        Endereco avenida = new Endereco("Copacabana",1351,"Ao lado da Farmácia Glória","Centro","Rio de Janeiro",UnidadeFederativa.RJ);
-        Apartamento apartamentoTop = new Apartamento(TipoDoImovel.APARTAMENTO,600000d,avenida,22);
-        opcoesParaFinanciamento.registrarImovel(apartamentoTop);
-
         Endereco paulista = new Endereco("Avenida Paulista",9584,"Apartamento 96","Centro","São Paulo",UnidadeFederativa.SP);
         Apartamento apartamentoLuxo = new Apartamento(TipoDoImovel.APARTAMENTO,500000d,paulista,19);
         opcoesParaFinanciamento.registrarImovel(apartamentoLuxo);
+
+        Endereco avenida = new Endereco("Copacabana",1351,"Ao lado da Farmácia Glória","Centro","Rio de Janeiro",UnidadeFederativa.RJ);
+        Apartamento apartamentoTop = new Apartamento(TipoDoImovel.APARTAMENTO,800000d,avenida,22);
+        opcoesParaFinanciamento.registrarImovel(apartamentoTop);
+
+//        Casa cabana = new Casa(TipoDoImovel.CASA,40000d,oriental,false);
+//        opcoesParaFinanciamento.registrarImovel(cabana);
 
         /**
          * FIM
          *
          * NÃO MODIFICAR ESTA CLASSE APÓS ESTA LINHA.
          */
-
 
 
         List<Imovel> todasAsOpcoes = opcoesParaFinanciamento.buscarOpcoes(Double.MAX_VALUE);

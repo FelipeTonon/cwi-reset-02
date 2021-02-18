@@ -3,32 +3,30 @@ public abstract class Imovel {
     private TipoDoImovel tipo;
     private Double valor;
     private Endereco endereco;
+    private String cidade;
     private UnidadeFederativa estado;
-
+    private String logradouro;
+    private Integer numero;
+    private String bairro;
+    private String complemento;
 
     public Imovel(TipoDoImovel tipo, Double valor, Endereco endereco) {
         this.tipo = tipo;
         this.valor = valor;
         this.endereco = endereco;
+        cidade = endereco.getCidade();
         estado = endereco.getEstado();
+        logradouro = endereco.getLogradouro();
+        numero = endereco.getNumero();
+        bairro = endereco.getBairro();
+        complemento = endereco.getComplemento();
     }
 
-    public String apresentacao(){
+    public abstract String apresentacao();
 
-        System.out.println("*** PREÇO DESSA BARBADINHA ***");
-        System.out.println("Valor: R$ " + this.valor);
-        System.out.println("*** INFORMAÇÕES DO IMÓVEL *** ");
-        System.out.println("Cidade: " + endereco.getCidade());
-        System.out.println("Estado: " + endereco.getEstado());
-        System.out.println("Tipo do imóvel: " + this.tipo);
-        System.out.println("Logradouro: " + endereco.getLogradouro());
-        System.out.println("Número: " + endereco.getNumero());
-        System.out.println("Bairro: " + endereco.getBairro());
-        System.out.println("Complemento: " + endereco.getComplemento());
-
-        return null;
+    public TipoDoImovel getTipo() {
+        return tipo;
     }
-
 
     public Double getValor() {
         return valor;
@@ -38,7 +36,28 @@ public abstract class Imovel {
         return endereco;
     }
 
+    public String getCidade() {
+        return cidade;
+    }
+
     public UnidadeFederativa getEstado() {
         return estado;
     }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public Integer getNumero() {
+        return numero;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
 }
