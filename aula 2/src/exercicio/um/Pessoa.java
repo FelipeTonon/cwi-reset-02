@@ -1,21 +1,28 @@
 package exercicio.um;
 
-public class Pessoa {
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+
+public abstract class Pessoa {
 
     private String nome;
-    private Integer idade;
+    private LocalDate dataNascimento;
     private Genero genero;
 
-    public Pessoa(String nome, Integer idade, Genero genero) {
+
+    public Pessoa(String nome, LocalDate dataNascimento, Genero genero) {
         this.nome = nome;
-        this.idade = idade;
+        this.dataNascimento = dataNascimento;
         this.genero = genero;
     }
 
+
     public void imprimirInformacoes(){
-        System.out.println("Nome: " + this.nome);
-        System.out.println("Idade: " + this.idade);
-        System.out.println("Gênero: " + this.genero);
+        System.out.println("Nome: " + getNome());
+        System.out.println("Idade: " + Period.between(this.dataNascimento,LocalDate.now()).getYears());
+        System.out.println("Gênero: " + getGenero());
     }
 
     public String getNome() {
@@ -25,4 +32,6 @@ public class Pessoa {
     public Genero getGenero() {
         return genero;
     }
+
+
 }

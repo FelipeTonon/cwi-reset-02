@@ -1,23 +1,26 @@
 package exercicio.um;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Filme {
 
     private String nomeDoFilme;
     private String descricao;
-    private double duracao;
+    private Double duracao;
     private Integer anoDeLancamento;
     private Integer avaliacao;
-    private Diretor diretor;
+    private List<Pessoa> elenco;
 
-    public Filme(String nomeDoFilme, String descricao, double duracao, Integer anoDeLancamento, Integer avaliacao,
-                 Diretor diretor) {
+
+    public Filme(String nomeDoFilme, String descricao, Double duracao, Integer anoDeLancamento, Integer avaliacao, List<Pessoa> elenco) {
         defineAvaliacao(avaliacao);
         defineAvaliacaoPeloNome(nomeDoFilme);
         this.nomeDoFilme = nomeDoFilme;
         this.descricao = descricao;
         this.duracao = duracao;
         this.anoDeLancamento = anoDeLancamento;
-        this.diretor = diretor;
+        this.elenco = elenco;
     }
 
     private void defineAvaliacao(Integer avaliacao){
@@ -44,8 +47,16 @@ public class Filme {
         System.out.println("Duração: " + this.duracao + " minutos");
         System.out.println("Ano de lançamento: " + this.anoDeLancamento);
         System.out.println("Avaliação: " + this.avaliacao);
-        System.out.println("Diretor: " + diretor.getNome());
         System.out.println("");
+    }
+
+    public void creditos(){
+        System.out.println("***  CRÉDITOS  ***");
+        System.out.println("ELENCO:");
+
+        for (Pessoa pessoa: elenco){
+            pessoa.imprimirInformacoes();
+        }
     }
 
 }

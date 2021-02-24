@@ -1,11 +1,13 @@
 package exercicio.um;
 
+import java.time.LocalDate;
+
 public class Diretor extends Pessoa {
 
     private Integer quantidadeDeFilmesDirigidos;
 
-    public Diretor(String nome, Integer idade, Integer quantidadeDeFilmesDirigidos, Genero genero) {
-        super(nome, idade, genero);
+    public Diretor(String nome, LocalDate dataNascimento, Integer quantidadeDeFilmesDirigidos, Genero genero) {
+        super(nome, dataNascimento, genero);
         this.quantidadeDeFilmesDirigidos = quantidadeDeFilmesDirigidos;
     }
 
