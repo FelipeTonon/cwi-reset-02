@@ -23,8 +23,9 @@ public interface ContaBancaria {
     /**
      * Consulta o saldo atual da br.com.banco.desgraca.domain.conta bancária.
      *
+     * @return
      */
-    void consultarSaldo();
+    double consultarSaldo();
 
 
     /**

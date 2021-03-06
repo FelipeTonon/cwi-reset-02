@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a45c695e-d50c-4296-adcd-82692c02e8e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividades/src/oo/Alunos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividades/src/oo/Alunos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/BancoDaDesgraca.class" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/BancoDaDesgraca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/domain/conta/ContaBancaria.class" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/domain/conta/ContaBancaria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/domain/conta/ContaCorrente.class" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/domain/conta/ContaCorrente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/domain/conta/ContaDigital.class" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/domain/conta/ContaDigital.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/domain/conta/ContaPoupanca.class" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/domain/conta/ContaPoupanca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/exception/ContaCorrenteException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/exception/ContaDigitalException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/out/production/banco-da-desgraca/br/com/banco/desgraca/exception/ContaPoupancaException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/BancoDaDesgraca.java" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/BancoDaDesgraca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/domain/conta/ContaBancaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/domain/conta/ContaBancaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/domain/conta/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/domain/conta/ContaCorrente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/domain/conta/ContaDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/domain/conta/ContaDigital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/domain/conta/ContaPoupanca.java" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/domain/conta/ContaPoupanca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/exception/ContaCorrenteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/exception/InstituicaoBancariaInvalidaException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/exception/ContaDigitalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/exception/ValorSaqueInvalidoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco-da-desgraca/src/br/com/banco/desgraca/exception/ContaPoupancaException.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +45,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/README.md" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/RESETFLIX" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

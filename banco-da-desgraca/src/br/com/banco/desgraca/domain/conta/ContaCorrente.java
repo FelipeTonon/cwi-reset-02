@@ -3,8 +3,9 @@ package br.com.banco.desgraca.domain.conta;
 import br.com.banco.desgraca.domain.InstituicaoBancaria;
 import br.com.banco.desgraca.domain.TipoTransacao;
 import br.com.banco.desgraca.domain.Transacao;
-import br.com.banco.desgraca.exception.ContaCorrenteException;
+import br.com.banco.desgraca.exception.InstituicaoBancariaInvalidaException;
 import br.com.banco.desgraca.exception.SaldoInsuficienteException;
+import br.com.banco.desgraca.exception.ValorSaqueInvalidoException;
 
 import java.text.DecimalFormat;
 import java.time.LocalDate;
@@ -38,8 +39,9 @@ public class ContaCorrente implements ContaBancaria {
     }
 
     @Override
-    public void consultarSaldo() {
+    public double consultarSaldo() {
         System.out.println("O saldo da " + toString() + " é de " + DecimalFormat.getCurrencyInstance().format(this.saldo) + ".");
+        return 0;
     }
 
     @Override
@@ -59,16 +61,17 @@ public class ContaCorrente implements ContaBancaria {
         if (valor > this.saldo) {
             throw new SaldoInsuficienteException("Você não possui saldo suficiente para realizar essa transação.");
         } else {
-            if ((valor % 5) == 0) {
-                saldo -= valor;
+            if ((valor % 5) != 0) {
+                throw new ValorSaqueInvalidoException("Não há notas disponíveis para saque no valor solicitado. " +
+                        "Favor entrar com um valor multiplo de R$ 5,00.");
+            } else {
+                this.saldo -= valor;
 
                 System.out.println("Sacando valor de " + DecimalFormat.getCurrencyInstance().format(valor) + " da " + toString());
 
                 Transacao a = new Transacao(TipoTransacao.SACAR, valor);
                 transacoesConta.add(a);
-            } else {
-                throw new ContaCorrenteException("Não há notas disponíveis para saque no valor solicitado. " +
-                        "Favor entrar com um valor multiplo de R$ 5,00.");
+
             }
         }
     }

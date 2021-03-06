@@ -3,7 +3,8 @@ package br.com.banco.desgraca.domain.conta;
 import br.com.banco.desgraca.domain.InstituicaoBancaria;
 import br.com.banco.desgraca.domain.TipoTransacao;
 import br.com.banco.desgraca.domain.Transacao;
-import br.com.banco.desgraca.exception.ContaDigitalException;
+import br.com.banco.desgraca.exception.InstituicaoBancariaInvalidaException;
+import br.com.banco.desgraca.exception.ValorSaqueInvalidoException;
 import br.com.banco.desgraca.exception.SaldoInsuficienteException;
 
 import java.text.DecimalFormat;
@@ -29,7 +30,7 @@ public class ContaDigital implements ContaBancaria{
         if(InstituicaoBancaria.ITAU.equals(instituicaoBancaria) || instituicaoBancaria.NUBANK.equals(instituicaoBancaria)){
             this.instituicaoBancaria = instituicaoBancaria;
         } else {
-            throw new ContaDigitalException("Não é possível abrir uma Conta Digital no banco solicitado.");
+            throw new InstituicaoBancariaInvalidaException("Não é possível abrir uma Conta Digital no banco solicitado.");
         }
     }
 
@@ -44,8 +45,9 @@ public class ContaDigital implements ContaBancaria{
     }
 
     @Override
-    public void consultarSaldo() {
+    public double consultarSaldo() {
         System.out.println("O saldo da " + toString() + " é de " + DecimalFormat.getCurrencyInstance().format(this.saldo) + ".");
+        return 0;
     }
 
     @Override
@@ -72,7 +74,7 @@ public class ContaDigital implements ContaBancaria{
                Transacao a = new Transacao(TipoTransacao.SACAR, valor);
                transacoesConta.add(a);
            } else {
-               throw new ContaDigitalException("Saque permitido apenas acima de R$ 9.99 em Conta Digital.");
+               throw new ValorSaqueInvalidoException("Saque permitido apenas acima de R$ 9.99 em Conta Digital.");
            }
        }
     }
@@ -97,7 +99,7 @@ public class ContaDigital implements ContaBancaria{
     @Override
     public void exibirExtrato(LocalDate inicio, LocalDate fim) {
 
-        System.out.println("----- Extrato " + toString());
+        System.out.println("----- Extrato " + toString().toUpperCase());
 
         for (Transacao transacoesConta : transacoesConta) {
 

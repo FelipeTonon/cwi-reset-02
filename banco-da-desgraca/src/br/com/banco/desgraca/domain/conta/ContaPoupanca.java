@@ -3,9 +3,9 @@ package br.com.banco.desgraca.domain.conta;
 import br.com.banco.desgraca.domain.InstituicaoBancaria;
 import br.com.banco.desgraca.domain.TipoTransacao;
 import br.com.banco.desgraca.domain.Transacao;
-import br.com.banco.desgraca.exception.ContaDigitalException;
-import br.com.banco.desgraca.exception.ContaPoupancaException;
+import br.com.banco.desgraca.exception.InstituicaoBancariaInvalidaException;
 import br.com.banco.desgraca.exception.SaldoInsuficienteException;
+import br.com.banco.desgraca.exception.ValorSaqueInvalidoException;
 
 import java.text.DecimalFormat;
 import java.time.LocalDate;
@@ -30,7 +30,7 @@ public class ContaPoupanca implements ContaBancaria{
 
     private void instituicoesBancariasPermitidas(InstituicaoBancaria instituicaoBancaria){
         if(InstituicaoBancaria.NUBANK.equals(instituicaoBancaria)){
-            throw new ContaPoupancaException("Não é possível criar uma Conta Poupança no banco solicitado.");
+            throw new InstituicaoBancariaInvalidaException("Não é possível criar uma Conta Poupança no banco solicitado.");
         } else {
             this.instituicaoBancaria = instituicaoBancaria;
         }
@@ -47,8 +47,9 @@ public class ContaPoupanca implements ContaBancaria{
     }
 
     @Override
-    public void consultarSaldo() {
+    public double consultarSaldo() {
         System.out.println("O saldo da " + toString() + " é de " + DecimalFormat.getCurrencyInstance().format(this.saldo) + ".");
+        return 0;
     }
 
     @Override
@@ -67,7 +68,7 @@ public class ContaPoupanca implements ContaBancaria{
             throw new SaldoInsuficienteException("Você não possui saldo suficiente para realizar essa transação.");
         } else {
             if (valor < 50.0) {
-                throw new ContaPoupancaException("Não é possível realizar saque com valor menor que R$ 50,00.");
+                throw new ValorSaqueInvalidoException("Não é possível realizar saque com valor menor que R$ 50,00.");
             } else {
                 this.taxa = valor * 0.02;
                 this.saldo = (this.saldo - valor) - this.taxa;
